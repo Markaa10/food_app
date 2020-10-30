@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/presentation/helpers/size_config.dart';
+import 'package:food_app/presentation/helpers/styles/app_colors.dart';
 import 'package:food_app/presentation/helpers/widgets/app_button.dart';
 
 class Demo extends StatelessWidget {
@@ -12,7 +13,8 @@ class Demo extends StatelessWidget {
         child: AppButton(
           onPressed: () {},
           text: 'Demo',
-          color: Colors.amber,
+          color: AppColors.kprimaryColor,
+          textColor: Colors.white,
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../size_config.dart';
 
@@ -27,9 +28,9 @@ class AppButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: TextStyle(
+        style: GoogleFonts.montserrat(
           color: textColor,
-          fontSize: getProportionateScreenWidth(14),
+          fontSize: getProportionateScreenWidth(17),
           fontWeight: FontWeight.bold,
         ),
       ),
