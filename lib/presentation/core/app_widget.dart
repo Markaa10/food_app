@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/presentation/startup/startup_page.dart';
 
 import '../demo.dart';
 
@@ -8,7 +9,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: 'My Todo',
       debugShowCheckedModeBanner: false,
-      home: Demo(),
+      home: StartupPage(),
       theme: ThemeData(
         fontFamily: 'Gilroy',
       ),
