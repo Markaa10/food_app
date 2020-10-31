@@ -25,9 +25,9 @@ class Body extends HookWidget {
             SizedBox(height: SizeConfig.screenHeight * 0.145),
             Text(
               'Log in',
-              style: GoogleFonts.montserrat(
+              style: TextStyle(
                 fontSize: getProportionateScreenWidth(25),
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
               ),
             ),
             SizedBox(height: SizeConfig.screenHeight * 0.050),
@@ -47,7 +47,7 @@ class Body extends HookWidget {
                 _buildRemembermeGestureDetector(remember),
                 Text(
                   'Forgot password?',
-                  style: GoogleFonts.montserrat(
+                  style: TextStyle(
                     fontSize: getProportionateScreenWidth(13),
                     color: AppColors.kprimaryColor,
                   ),
@@ -65,7 +65,7 @@ class Body extends HookWidget {
             Align(
               child: Text(
                 'or login with',
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
                   fontSize: getProportionateScreenWidth(15),
                   color: const Color(0xff665566),
                 ),
@@ -88,7 +88,7 @@ class Body extends HookWidget {
               children: [
                 Text(
                   "Don't have an account ? ",
-                  style: GoogleFonts.montserrat(
+                  style: TextStyle(
                     fontSize: getProportionateScreenWidth(14),
                     color: const Color(0xff665566),
                     fontWeight: FontWeight.normal,
@@ -96,7 +96,7 @@ class Body extends HookWidget {
                 ),
                 Text(
                   'SIGN UP',
-                  style: GoogleFonts.montserrat(
+                  style: TextStyle(
                     fontSize: getProportionateScreenWidth(14),
                     color: AppColors.kprimaryColor,
                     fontWeight: FontWeight.bold,
@@ -155,7 +155,7 @@ class Body extends HookWidget {
           SizedBox(width: SizeConfig.screenWidth * 0.010),
           Text(
             'Remember me',
-            style: GoogleFonts.montserrat(
+            style: TextStyle(
               fontSize: getProportionateScreenWidth(13),
               fontWeight: FontWeight.normal,
               color: const Color(0xff665566),

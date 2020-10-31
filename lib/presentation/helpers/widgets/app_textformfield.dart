@@ -25,6 +25,15 @@ class AppTextFormField extends StatelessWidget {
       height: getProportionateScreenHeight(55),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(getProportionateScreenWidth(10)),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            blurRadius: getProportionateScreenWidth(0.10),
+            spreadRadius: getProportionateScreenWidth(0.03),
+            color: const Color(0xffE2E2E2),
+            // offset: Offset.infinite,
+          )
+        ],
       ),
       child: TextFormField(
         onChanged: onChanged,

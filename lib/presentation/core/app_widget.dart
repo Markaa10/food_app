@@ -11,8 +11,8 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       builder: ExtendedNavigator.builder<r.Router>(router: r.Router()),
       theme: ThemeData(
-          // fontFamily: GoogleFonts,
-          ),
+        textTheme: GoogleFonts.montserratTextTheme(Theme.of(context).textTheme),
+      ),
     );
   }
 }
