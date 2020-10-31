@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/presentation/helpers/styles/app_textstyle.dart';
+import 'package:food_app/presentation/routes/router.gr.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../helpers/size_config.dart';
@@ -41,7 +43,8 @@ class StartupContent extends StatelessWidget {
         ),
         SizedBox(height: SizeConfig.screenHeight * 0.034),
         FlatButton(
-          onPressed: () {},
+          onPressed: () =>
+              ExtendedNavigator.of(context).replace(Routes.loginPage),
           child: Text(
             buttonText,
             style: GoogleFonts.montserrat(

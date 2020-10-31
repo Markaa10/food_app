@@ -1,7 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/presentation/startup/startup_page.dart';
-
-import '../demo.dart';
+import 'package:food_app/presentation/routes/router.gr.dart' as r;
+import 'package:google_fonts/google_fonts.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -9,10 +9,10 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: 'My Todo',
       debugShowCheckedModeBanner: false,
-      home: StartupPage(),
+      builder: ExtendedNavigator.builder<r.Router>(router: r.Router()),
       theme: ThemeData(
-        fontFamily: 'Gilroy',
-      ),
+          // fontFamily: GoogleFonts,
+          ),
     );
   }
 }
