@@ -47,11 +47,15 @@ class Body extends HookWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildRemembermeGestureDetector(remember),
-                Text(
-                  'Forgot password?',
-                  style: TextStyle(
-                    fontSize: getProportionateScreenWidth(13),
-                    color: AppColors.kprimaryColor,
+                GestureDetector(
+                  onTap: () =>
+                      ExtendedNavigator.of(context).push(Routes.forgotPassword),
+                  child: Text(
+                    'Forgot password?',
+                    style: TextStyle(
+                      fontSize: getProportionateScreenWidth(13),
+                      color: AppColors.kprimaryColor,
+                    ),
                   ),
                 )
               ],
