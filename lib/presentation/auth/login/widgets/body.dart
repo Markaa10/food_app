@@ -65,7 +65,8 @@ class Body extends HookWidget {
               text: 'Sign In',
               color: AppColors.kprimaryColor,
               textColor: Colors.white,
-              onPressed: () {},
+              onPressed: () =>
+                  ExtendedNavigator.of(context).replace(Routes.homePage),
             ),
             SizedBox(height: SizeConfig.screenHeight * 0.050),
             Align(

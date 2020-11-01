@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import '../auth/login/login_page.dart';
 import '../auth/login/widgets/forgot_password.dart';
 import '../auth/signup/signup_page.dart';
+import '../home/home_page.dart';
 import '../startup/startup_page.dart';
 
 class Routes {
@@ -19,11 +20,13 @@ class Routes {
   static const String loginPage = '/login-page';
   static const String forgotPassword = '/forgot-password';
   static const String signupPage = '/signup-page';
+  static const String homePage = '/home-page';
   static const all = <String>{
     startupPage,
     loginPage,
     forgotPassword,
     signupPage,
+    homePage,
   };
 }
 
@@ -35,6 +38,7 @@ class Router extends RouterBase {
     RouteDef(Routes.loginPage, page: LoginPage),
     RouteDef(Routes.forgotPassword, page: ForgotPassword),
     RouteDef(Routes.signupPage, page: SignupPage),
+    RouteDef(Routes.homePage, page: HomePage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -63,6 +67,12 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    HomePage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => HomePage(),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -78,4 +88,6 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushForgotPassword() => push<dynamic>(Routes.forgotPassword);
 
   Future<dynamic> pushSignupPage() => push<dynamic>(Routes.signupPage);
+
+  Future<dynamic> pushHomePage() => push<dynamic>(Routes.homePage);
 }
