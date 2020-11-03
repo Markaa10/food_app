@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/presentation/helpers/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../size_config.dart';
 
 abstract class AppTextstyle {
   static TextStyle get ktitleText => GoogleFonts.montserrat(
