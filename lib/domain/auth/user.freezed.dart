@@ -16,13 +16,11 @@ class _$UserTearOff {
 // ignore: unused_element
   _User call(
       {@required UniqueId id,
-      String fullName,
-      String userName,
-      String email,
-      String phone}) {
+      Username userName,
+      EmailAddress email,
+      Phone phone}) {
     return _User(
       id: id,
-      fullName: fullName,
       userName: userName,
       email: email,
       phone: phone,
@@ -37,10 +35,9 @@ const $User = _$UserTearOff();
 /// @nodoc
 mixin _$User {
   UniqueId get id;
-  String get fullName;
-  String get userName;
-  String get email;
-  String get phone;
+  Username get userName;
+  EmailAddress get email;
+  Phone get phone;
 
   $UserCopyWith<User> get copyWith;
 }
@@ -49,12 +46,7 @@ mixin _$User {
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
-  $Res call(
-      {UniqueId id,
-      String fullName,
-      String userName,
-      String email,
-      String phone});
+  $Res call({UniqueId id, Username userName, EmailAddress email, Phone phone});
 }
 
 /// @nodoc
@@ -68,17 +60,15 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
-    Object fullName = freezed,
     Object userName = freezed,
     Object email = freezed,
     Object phone = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as UniqueId,
-      fullName: fullName == freezed ? _value.fullName : fullName as String,
-      userName: userName == freezed ? _value.userName : userName as String,
-      email: email == freezed ? _value.email : email as String,
-      phone: phone == freezed ? _value.phone : phone as String,
+      userName: userName == freezed ? _value.userName : userName as Username,
+      email: email == freezed ? _value.email : email as EmailAddress,
+      phone: phone == freezed ? _value.phone : phone as Phone,
     ));
   }
 }
@@ -88,12 +78,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) then) =
       __$UserCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {UniqueId id,
-      String fullName,
-      String userName,
-      String email,
-      String phone});
+  $Res call({UniqueId id, Username userName, EmailAddress email, Phone phone});
 }
 
 /// @nodoc
@@ -108,41 +93,36 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
-    Object fullName = freezed,
     Object userName = freezed,
     Object email = freezed,
     Object phone = freezed,
   }) {
     return _then(_User(
       id: id == freezed ? _value.id : id as UniqueId,
-      fullName: fullName == freezed ? _value.fullName : fullName as String,
-      userName: userName == freezed ? _value.userName : userName as String,
-      email: email == freezed ? _value.email : email as String,
-      phone: phone == freezed ? _value.phone : phone as String,
+      userName: userName == freezed ? _value.userName : userName as Username,
+      email: email == freezed ? _value.email : email as EmailAddress,
+      phone: phone == freezed ? _value.phone : phone as Phone,
     ));
   }
 }
 
 /// @nodoc
 class _$_User implements _User {
-  const _$_User(
-      {@required this.id, this.fullName, this.userName, this.email, this.phone})
+  const _$_User({@required this.id, this.userName, this.email, this.phone})
       : assert(id != null);
 
   @override
   final UniqueId id;
   @override
-  final String fullName;
+  final Username userName;
   @override
-  final String userName;
+  final EmailAddress email;
   @override
-  final String email;
-  @override
-  final String phone;
+  final Phone phone;
 
   @override
   String toString() {
-    return 'User(id: $id, fullName: $fullName, userName: $userName, email: $email, phone: $phone)';
+    return 'User(id: $id, userName: $userName, email: $email, phone: $phone)';
   }
 
   @override
@@ -151,9 +131,6 @@ class _$_User implements _User {
         (other is _User &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.fullName, fullName) ||
-                const DeepCollectionEquality()
-                    .equals(other.fullName, fullName)) &&
             (identical(other.userName, userName) ||
                 const DeepCollectionEquality()
                     .equals(other.userName, userName)) &&
@@ -167,7 +144,6 @@ class _$_User implements _User {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(fullName) ^
       const DeepCollectionEquality().hash(userName) ^
       const DeepCollectionEquality().hash(email) ^
       const DeepCollectionEquality().hash(phone);
@@ -180,21 +156,18 @@ class _$_User implements _User {
 abstract class _User implements User {
   const factory _User(
       {@required UniqueId id,
-      String fullName,
-      String userName,
-      String email,
-      String phone}) = _$_User;
+      Username userName,
+      EmailAddress email,
+      Phone phone}) = _$_User;
 
   @override
   UniqueId get id;
   @override
-  String get fullName;
+  Username get userName;
   @override
-  String get userName;
+  EmailAddress get email;
   @override
-  String get email;
-  @override
-  String get phone;
+  Phone get phone;
   @override
   _$UserCopyWith<_User> get copyWith;
 }

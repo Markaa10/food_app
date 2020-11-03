@@ -3,20 +3,20 @@ part of 'sign_up_form_bloc.dart';
 @freezed
 abstract class SignUpFormState with _$SignUpFormState {
   const factory SignUpFormState({
-    @required String username,
-    @required String emailAddress,
-    @required String password,
-    @required String phone,
+    @required Username username,
+    @required EmailAddress emailAddress,
+    @required Password password,
+    @required Phone phone,
     @required bool showErrorMessages,
     @required bool isSubmitting,
     @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
   }) = _SignUpFormState;
 
   factory SignUpFormState.initial() => SignUpFormState(
-        username: '',
-        emailAddress: '',
-        password: '',
-        phone: '',
+        username: Username(''),
+        emailAddress: EmailAddress(''),
+        password: Password(''),
+        phone: Phone(''),
         showErrorMessages: false,
         isSubmitting: false,
         authFailureOrSuccessOption: none(),

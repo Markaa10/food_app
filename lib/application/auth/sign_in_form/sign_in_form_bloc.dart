@@ -3,15 +3,18 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
+import 'package:food_app/domain/auth/value_objects.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'package:food_app/domain/auth/auth_failure.dart';
 import 'package:food_app/domain/auth/i_auth_facade.dart';
+import 'package:injectable/injectable.dart';
 
 part 'sign_in_form_bloc.freezed.dart';
 part 'sign_in_form_event.dart';
 part 'sign_in_form_state.dart';
 
+@injectable
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
 
@@ -24,28 +27,33 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
     yield* event.map(
       emailChanged: (e) async* {
         yield state.copyWith(
-          emailAddress: e.emailAddressStr,
+          emailAddress: EmailAddress(e.emailAddressStr),
           authFailureOrSuccessOption: none(),
         );
       },
       passwordChanged: (e) async* {
         yield state.copyWith(
-          password: e.passwordStr,
+          password: Password(e.passwordStr),
           authFailureOrSuccessOption: none(),
         );
       },
       signInWithEmailAndPasswordPressed: (e) async* {
         Either<AuthFailure, Unit> failureOrSuccess;
 
-        yield state.copyWith(
-          isSubmitting: true,
-          authFailureOrSuccessOption: none(),
-        );
+        final isEmailValid = state.emailAddress.isValid();
+        final isPasswordValid = state.password.isValid();
 
-        failureOrSuccess = await _authFacade.signInWithEmailAndPassword(
-          email: state.emailAddress,
-          password: state.password,
-        );
+        if (isEmailValid && isPasswordValid) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authFailureOrSuccessOption: none(),
+          );
+
+          failureOrSuccess = await _authFacade.signInWithEmailAndPassword(
+            emailAddress: state.emailAddress,
+            password: state.password,
+          );
+        }
 
         yield state.copyWith(
           isSubmitting: false,

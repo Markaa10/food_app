@@ -3,8 +3,8 @@ part of 'sign_in_form_bloc.dart';
 @freezed
 abstract class SignInFormState with _$SignInFormState {
   const factory SignInFormState({
-    @required String emailAddress,
-    @required String password,
+    @required EmailAddress emailAddress,
+    @required Password password,
     @required bool showErrorMessages,
     @required bool isSubmitting,
     @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,

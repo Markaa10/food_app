@@ -623,8 +623,8 @@ class _$SignInFormStateTearOff {
 
 // ignore: unused_element
   _SignInFormState call(
-      {@required String emailAddress,
-      @required String password,
+      {@required EmailAddress emailAddress,
+      @required Password password,
       @required bool showErrorMessages,
       @required bool isSubmitting,
       @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
@@ -644,8 +644,8 @@ const $SignInFormState = _$SignInFormStateTearOff();
 
 /// @nodoc
 mixin _$SignInFormState {
-  String get emailAddress;
-  String get password;
+  EmailAddress get emailAddress;
+  Password get password;
   bool get showErrorMessages;
   bool get isSubmitting;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
@@ -659,8 +659,8 @@ abstract class $SignInFormStateCopyWith<$Res> {
           SignInFormState value, $Res Function(SignInFormState) then) =
       _$SignInFormStateCopyWithImpl<$Res>;
   $Res call(
-      {String emailAddress,
-      String password,
+      {EmailAddress emailAddress,
+      Password password,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
@@ -686,8 +686,8 @@ class _$SignInFormStateCopyWithImpl<$Res>
     return _then(_value.copyWith(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
-          : emailAddress as String,
-      password: password == freezed ? _value.password : password as String,
+          : emailAddress as EmailAddress,
+      password: password == freezed ? _value.password : password as Password,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -708,8 +708,8 @@ abstract class _$SignInFormStateCopyWith<$Res>
       __$SignInFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String emailAddress,
-      String password,
+      {EmailAddress emailAddress,
+      Password password,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
@@ -737,8 +737,8 @@ class __$SignInFormStateCopyWithImpl<$Res>
     return _then(_SignInFormState(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
-          : emailAddress as String,
-      password: password == freezed ? _value.password : password as String,
+          : emailAddress as EmailAddress,
+      password: password == freezed ? _value.password : password as Password,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -768,9 +768,9 @@ class _$_SignInFormState
         assert(authFailureOrSuccessOption != null);
 
   @override
-  final String emailAddress;
+  final EmailAddress emailAddress;
   @override
-  final String password;
+  final Password password;
   @override
   final bool showErrorMessages;
   @override
@@ -836,9 +836,9 @@ class _$_SignInFormState
 abstract class _SignInFormState implements SignInFormState {
   const factory _SignInFormState(
           {@required
-              String emailAddress,
+              EmailAddress emailAddress,
           @required
-              String password,
+              Password password,
           @required
               bool showErrorMessages,
           @required
@@ -848,9 +848,9 @@ abstract class _SignInFormState implements SignInFormState {
       _$_SignInFormState;
 
   @override
-  String get emailAddress;
+  EmailAddress get emailAddress;
   @override
-  String get password;
+  Password get password;
   @override
   bool get showErrorMessages;
   @override

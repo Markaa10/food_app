@@ -942,10 +942,10 @@ class _$SignUpFormStateTearOff {
 
 // ignore: unused_element
   _SignUpFormState call(
-      {@required String username,
-      @required String emailAddress,
-      @required String password,
-      @required String phone,
+      {@required Username username,
+      @required EmailAddress emailAddress,
+      @required Password password,
+      @required Phone phone,
       @required bool showErrorMessages,
       @required bool isSubmitting,
       @required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
@@ -967,10 +967,10 @@ const $SignUpFormState = _$SignUpFormStateTearOff();
 
 /// @nodoc
 mixin _$SignUpFormState {
-  String get username;
-  String get emailAddress;
-  String get password;
-  String get phone;
+  Username get username;
+  EmailAddress get emailAddress;
+  Password get password;
+  Phone get phone;
   bool get showErrorMessages;
   bool get isSubmitting;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
@@ -984,10 +984,10 @@ abstract class $SignUpFormStateCopyWith<$Res> {
           SignUpFormState value, $Res Function(SignUpFormState) then) =
       _$SignUpFormStateCopyWithImpl<$Res>;
   $Res call(
-      {String username,
-      String emailAddress,
-      String password,
-      String phone,
+      {Username username,
+      EmailAddress emailAddress,
+      Password password,
+      Phone phone,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
@@ -1013,12 +1013,12 @@ class _$SignUpFormStateCopyWithImpl<$Res>
     Object authFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
-      username: username == freezed ? _value.username : username as String,
+      username: username == freezed ? _value.username : username as Username,
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
-          : emailAddress as String,
-      password: password == freezed ? _value.password : password as String,
-      phone: phone == freezed ? _value.phone : phone as String,
+          : emailAddress as EmailAddress,
+      password: password == freezed ? _value.password : password as Password,
+      phone: phone == freezed ? _value.phone : phone as Phone,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -1039,10 +1039,10 @@ abstract class _$SignUpFormStateCopyWith<$Res>
       __$SignUpFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String username,
-      String emailAddress,
-      String password,
-      String phone,
+      {Username username,
+      EmailAddress emailAddress,
+      Password password,
+      Phone phone,
       bool showErrorMessages,
       bool isSubmitting,
       Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
@@ -1070,12 +1070,12 @@ class __$SignUpFormStateCopyWithImpl<$Res>
     Object authFailureOrSuccessOption = freezed,
   }) {
     return _then(_SignUpFormState(
-      username: username == freezed ? _value.username : username as String,
+      username: username == freezed ? _value.username : username as Username,
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
-          : emailAddress as String,
-      password: password == freezed ? _value.password : password as String,
-      phone: phone == freezed ? _value.phone : phone as String,
+          : emailAddress as EmailAddress,
+      password: password == freezed ? _value.password : password as Password,
+      phone: phone == freezed ? _value.phone : phone as Phone,
       showErrorMessages: showErrorMessages == freezed
           ? _value.showErrorMessages
           : showErrorMessages as bool,
@@ -1107,13 +1107,13 @@ class _$_SignUpFormState implements _SignUpFormState {
         assert(authFailureOrSuccessOption != null);
 
   @override
-  final String username;
+  final Username username;
   @override
-  final String emailAddress;
+  final EmailAddress emailAddress;
   @override
-  final String password;
+  final Password password;
   @override
-  final String phone;
+  final Phone phone;
   @override
   final bool showErrorMessages;
   @override
@@ -1173,13 +1173,13 @@ class _$_SignUpFormState implements _SignUpFormState {
 abstract class _SignUpFormState implements SignUpFormState {
   const factory _SignUpFormState(
           {@required
-              String username,
+              Username username,
           @required
-              String emailAddress,
+              EmailAddress emailAddress,
           @required
-              String password,
+              Password password,
           @required
-              String phone,
+              Phone phone,
           @required
               bool showErrorMessages,
           @required
@@ -1189,13 +1189,13 @@ abstract class _SignUpFormState implements SignUpFormState {
       _$_SignUpFormState;
 
   @override
-  String get username;
+  Username get username;
   @override
-  String get emailAddress;
+  EmailAddress get emailAddress;
   @override
-  String get password;
+  Password get password;
   @override
-  String get phone;
+  Phone get phone;
   @override
   bool get showErrorMessages;
   @override
