@@ -43,7 +43,7 @@ class Body extends HookWidget {
       builder: (context, state) {
         return SingleChildScrollView(
           child: Form(
-            autovalidateMode: AutovalidateMode.onUserInteraction,
+            // autovalidateMode: AutovalidateMode.onUserInteraction,
             autovalidate: state.showErrorMessages,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

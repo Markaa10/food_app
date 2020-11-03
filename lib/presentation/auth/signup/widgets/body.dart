@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
       builder: (context, state) {
         return SingleChildScrollView(
           child: Form(
-            autovalidateMode: AutovalidateMode.onUserInteraction,
+            // autovalidateMode: AutovalidateMode.onUserInteraction,
             autovalidate: state.showErrorMessages,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
