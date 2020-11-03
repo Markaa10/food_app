@@ -64,7 +64,7 @@ class Body extends HookWidget {
                   BorderRadius.circular(getProportionateScreenWidth(20)),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xff00000013),
+                  color: const Color(0xff000013),
                   blurRadius: getProportionateScreenWidth(90),
                   spreadRadius: getProportionateScreenWidth(30),
                 )
